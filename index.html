@@ -1,0 +1,1747 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>The Dog Spa | Veterinário, Banho e Tosa em São Paulo</title>
+    <meta
+      name="description"
+      content="The Dog Spa em Cerqueira César, São Paulo. Cuidado veterinário, banho e tosa e pet shop com atenção e carinho para o seu pet."
+    />
+    <meta name="theme-color" content="#768F31" />
+    <meta property="og:title" content="The Dog Spa" />
+    <meta
+      property="og:description"
+      content="Cuidado veterinário, banho e tosa e uma experiência premium para pets em Cerqueira César."
+    />
+    <meta property="og:type" content="website" />
+    <meta property="og:image" content="logo/logothedogspa.png" />
+    <link rel="icon" type="image/png" href="logo/logothedogspa.png" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Cormorant+Garamond:wght@500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      :root {
+        --green: #768f31;
+        --green-dark: #566b24;
+        --black: #111111;
+        --black-soft: #0b0b0b;
+        --white: #ffffff;
+        --cream: #f3efe5;
+        --cream-strong: #eae3d3;
+        --gray: #6f6f6f;
+        --line: rgba(17, 17, 17, 0.12);
+        --shadow: 0 20px 45px rgba(17, 17, 17, 0.12);
+        --shadow-soft: 0 12px 30px rgba(17, 17, 17, 0.08);
+        --radius: 26px;
+      }
+
+      * { box-sizing: border-box; }
+
+      html {
+        scroll-behavior: smooth;
+      }
+
+      body {
+        margin: 0;
+        font-family: "Inter", sans-serif;
+        background: var(--white);
+        color: var(--black);
+        line-height: 1.6;
+        overflow-x: hidden;
+      }
+
+      body.no-scroll {
+        overflow: hidden;
+      }
+
+      img { max-width: 100%; display: block; }
+
+      a {
+        color: inherit;
+        text-decoration: none;
+      }
+
+      button,
+      input,
+      textarea,
+      select {
+        font: inherit;
+      }
+
+      .container {
+        width: min(1200px, calc(100% - 32px));
+        margin: 0 auto;
+      }
+
+      .eyebrow {
+        display: inline-flex;
+        align-items: center;
+        gap: 10px;
+        font-size: 12px;
+        font-weight: 700;
+        letter-spacing: 0.18em;
+        text-transform: uppercase;
+        color: var(--green-dark);
+      }
+
+      .eyebrow::before {
+        content: "";
+        width: 42px;
+        height: 1px;
+        background: rgba(118, 143, 49, 0.5);
+      }
+
+      .section {
+        padding: clamp(80px, 10vw, 150px) 0;
+      }
+
+      .section-head {
+        max-width: 640px;
+        margin-bottom: 44px;
+      }
+
+      .section-title {
+        margin: 18px 0 16px;
+        font-size: clamp(2.2rem, 4vw, 4.3rem);
+        line-height: 0.96;
+        letter-spacing: -0.06em;
+        font-weight: 800;
+      }
+
+      .section-copy {
+        margin: 0;
+        color: rgba(17, 17, 17, 0.72);
+        font-size: 1.06rem;
+      }
+
+      .btn,
+      .btn-secondary {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        min-height: 54px;
+        padding: 0 26px;
+        border-radius: 999px;
+        border: 1px solid transparent;
+        font-weight: 700;
+        letter-spacing: -0.02em;
+        transition: transform 0.28s ease, box-shadow 0.28s ease, background 0.28s ease, border-color 0.28s ease;
+        cursor: pointer;
+      }
+
+      .btn {
+        background: var(--green);
+        color: var(--white);
+        box-shadow: 0 14px 26px rgba(118, 143, 49, 0.24);
+      }
+
+      .whatsapp-icon {
+        width: 19px;
+        height: 19px;
+        flex: 0 0 auto;
+        margin-right: 9px;
+      }
+
+      .btn:hover,
+      .btn:focus-visible {
+        transform: translateY(-2px);
+        box-shadow: 0 18px 32px rgba(118, 143, 49, 0.28);
+      }
+
+      .btn-secondary {
+        background: rgba(255, 255, 255, 0.06);
+        border-color: rgba(17, 17, 17, 0.12);
+        color: var(--black);
+      }
+
+      .btn-secondary:hover,
+      .btn-secondary:focus-visible {
+        transform: translateY(-2px);
+        border-color: rgba(17, 17, 17, 0.18);
+      }
+
+      .nav-wrap {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        min-height: 84px;
+        gap: 20px;
+      }
+
+      .brand {
+        display: inline-flex;
+        align-items: center;
+        min-width: 0;
+      }
+
+      .brand img {
+        width: 145px;
+        height: auto;
+        object-fit: contain;
+      }
+
+      .nav {
+        display: flex;
+        align-items: center;
+        gap: clamp(18px, 3vw, 36px);
+      }
+
+      .nav a {
+        position: relative;
+        font-size: 0.93rem;
+        color: rgba(17, 17, 17, 0.88);
+        transition: color 0.24s ease;
+      }
+
+      .nav a::after {
+        content: "";
+        position: absolute;
+        left: 0;
+        bottom: -8px;
+        width: 100%;
+        height: 1px;
+        background: rgba(17, 17, 17, 0.7);
+        transform: scaleX(0);
+        transform-origin: left;
+        transition: transform 0.28s ease;
+      }
+
+      .nav a:hover::after,
+      .nav a:focus-visible::after {
+        transform: scaleX(1);
+      }
+
+      .header-actions {
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+        gap: 12px;
+        margin-left: auto;
+      }
+
+      .nav-panel {
+        display: none;
+      }
+
+      .mobile-toggle {
+        display: none;
+      }
+
+      .hero {
+        position: relative;
+        padding-top: clamp(56px, 7vw, 80px);
+        padding-bottom: 70px;
+        background:
+          radial-gradient(circle at top left, rgba(118, 143, 49, 0.18), transparent 26%),
+          linear-gradient(180deg, #f8f5ee 0%, #f3efe5 62%, #ffffff 100%);
+      }
+
+      .hero-wrap {
+        display: grid;
+        grid-template-columns: 1.1fr 0.9fr;
+        align-items: center;
+        gap: clamp(32px, 5vw, 72px);
+      }
+
+      .hero-copy {
+        max-width: 620px;
+      }
+
+      .hero-title {
+        margin: 20px 0 18px;
+        font-size: clamp(3.25rem, 6vw, 6rem);
+        line-height: 0.9;
+        letter-spacing: -0.08em;
+        font-weight: 800;
+      }
+
+      .hero-title .serif {
+        display: block;
+        font-family: "Cormorant Garamond", serif;
+        font-weight: 600;
+        letter-spacing: -0.04em;
+        font-style: italic;
+        color: var(--green-dark);
+        transform: translateY(4px);
+      }
+
+      .hero-sub {
+        max-width: 560px;
+        font-size: 1.08rem;
+        color: rgba(17, 17, 17, 0.74);
+        margin: 0 0 30px;
+      }
+
+      .hero-actions {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 16px;
+        margin-bottom: 32px;
+      }
+
+      .hero-location-icon {
+        width: 18px;
+        height: 18px;
+        flex: 0 0 auto;
+        margin-right: 8px;
+      }
+
+      .hero-meta {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 20px 28px;
+        color: rgba(17, 17, 17, 0.72);
+        font-size: 0.82rem;
+        letter-spacing: 0.04em;
+        text-transform: uppercase;
+      }
+
+      .hero-meta span {
+        position: relative;
+        display: inline-flex;
+        align-items: center;
+        gap: 10px;
+      }
+
+      .hero-meta span::before {
+        content: "";
+        width: 7px;
+        height: 7px;
+        background: var(--green);
+        border-radius: 50%;
+      }
+
+      .hero-visual {
+        position: relative;
+      }
+
+      .visual-card {
+        position: relative;
+        width: min(520px, 100%);
+        aspect-ratio: 4 / 3;
+        margin-inline: auto;
+        border-radius: 28px;
+        overflow: hidden;
+        box-shadow: var(--shadow);
+      }
+
+      .hero-image {
+        position: absolute;
+        inset: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+        object-position: center;
+      }
+
+      .pet-stage {
+        position: absolute;
+        inset: 0;
+        display: grid;
+        place-items: center;
+      }
+
+      .pet-figure {
+        position: relative;
+        width: 72%;
+        height: 78%;
+        border-radius: 28% 72% 50% 50% / 38% 34% 66% 62%;
+        background: linear-gradient(180deg, rgba(255,255,255,0.42), rgba(255,255,255,0.08));
+        box-shadow: inset 0 0 0 1px rgba(255,255,255,0.45);
+        backdrop-filter: blur(4px);
+        transform: translateY(30px) rotate(-5deg);
+        overflow: hidden;
+      }
+
+      .pet-figure::before,
+      .pet-figure::after {
+        content: "";
+        position: absolute;
+        border-radius: 50%;
+        background: rgba(255,255,255,0.28);
+      }
+
+      .pet-figure::before {
+        width: 72%;
+        height: 64%;
+        right: -14%;
+        bottom: -8%;
+      }
+
+      .pet-figure::after {
+        width: 54%;
+        height: 42%;
+        left: 0;
+        top: 12%;
+      }
+
+      .pet-silhouette {
+        position: absolute;
+        left: 13%;
+        bottom: 12%;
+        width: 66%;
+        height: 56%;
+        background: linear-gradient(180deg, rgba(255,255,255,0.45), rgba(255,255,255,0.22));
+        border-radius: 48% 52% 37% 63% / 52% 48% 52% 48%;
+        transform: rotate(-7deg);
+      }
+
+      .pet-silhouette::before,
+      .pet-silhouette::after {
+        content: "";
+        position: absolute;
+        width: 26%;
+        height: 26%;
+        background: rgba(255,255,255,0.38);
+        border-radius: 50%;
+        top: 6%;
+      }
+
+      .pet-silhouette::before { left: 14%; }
+      .pet-silhouette::after { right: 18%; }
+
+      .floating-tag {
+        position: absolute;
+        display: inline-flex;
+        align-items: center;
+        gap: 10px;
+        padding: 12px 18px;
+        border-radius: 999px;
+        background: rgba(255, 255, 255, 0.78);
+        border: 1px solid rgba(17,17,17,0.05);
+        box-shadow: var(--shadow-soft);
+        font-size: 0.8rem;
+        font-weight: 600;
+        letter-spacing: 0.04em;
+        text-transform: uppercase;
+        color: rgba(17,17,17,0.8);
+        backdrop-filter: blur(8px);
+      }
+
+      .floating-tag.tag-one { left: -10px; top: 20%; }
+      .floating-tag.tag-two { right: -12px; bottom: 18%; }
+
+      .hero-ornament {
+        position: absolute;
+        inset: auto 10% -18px auto;
+        width: 180px;
+        height: 180px;
+        border: 1px solid rgba(17,17,17,0.09);
+        border-radius: 40% 60% 15% 85% / 35% 28% 72% 65%;
+        background: rgba(255,255,255,0.16);
+      }
+
+      .manifesto {
+        position: relative;
+        background: linear-gradient(180deg, #ffffff 0%, #f3efe5 100%);
+      }
+
+      .manifesto-grid {
+        display: grid;
+        grid-template-columns: 1.15fr 0.85fr;
+        gap: clamp(28px, 4vw, 54px);
+        align-items: center;
+      }
+
+      .manifesto-copy {
+        padding-right: 12px;
+      }
+
+      .manifesto-quote {
+        margin: 0;
+        font-family: "Cormorant Garamond", serif;
+        font-size: clamp(3.2rem, 5vw, 6.1rem);
+        line-height: 0.82;
+        letter-spacing: -0.06em;
+        color: var(--black);
+      }
+
+      .manifesto-text {
+        margin-top: 22px;
+        max-width: 580px;
+        color: rgba(17,17,17,0.7);
+        font-size: 1.1rem;
+      }
+
+      .manifesto-visual {
+        position: relative;
+        aspect-ratio: 7 / 8;
+      }
+
+      .manifesto-panel {
+        position: absolute;
+        inset: 0;
+        border-radius: 30px;
+        background: #e9e0ca;
+        overflow: hidden;
+        box-shadow: var(--shadow-soft);
+      }
+
+      .manifesto-image {
+        position: absolute;
+        inset: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: center;
+      }
+
+      .specialties {
+        background: linear-gradient(180deg, #ffffff 0%, #f8f5ee 100%);
+      }
+
+      .specialty-grid {
+        display: grid;
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        gap: 22px;
+      }
+
+      .specialty-card {
+        display: grid;
+        gap: 16px;
+        padding: 16px;
+        background: rgba(255,255,255,0.9);
+        border: 1px solid rgba(17,17,17,0.06);
+        border-radius: 24px;
+        box-shadow: var(--shadow-soft);
+      }
+
+      .specialty-thumb {
+        position: relative;
+        aspect-ratio: 4 / 3;
+        border-radius: 18px;
+        overflow: hidden;
+        background: #eef1e8;
+        border: 1px solid rgba(17,17,17,0.04);
+      }
+
+      .specialty-thumb img {
+        position: absolute;
+        inset: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: center;
+      }
+
+      .specialty-card h3 {
+        margin: 0;
+        font-size: 1.28rem;
+        letter-spacing: -0.04em;
+      }
+
+      .specialty-card p {
+        margin: 0;
+        color: rgba(17,17,17,0.7);
+      }
+
+      .differentials {
+        background: var(--black-soft);
+        color: var(--white);
+      }
+
+      .differentials .section-copy {
+        color: rgba(255,255,255,0.72);
+      }
+
+      .diff-grid {
+        display: grid;
+        grid-template-columns: repeat(4, minmax(0, 1fr));
+        gap: 20px;
+      }
+
+      .diff-item {
+        position: relative;
+        padding: 26px 18px 18px;
+        border-top: 1px solid rgba(255,255,255,0.12);
+        border-bottom: 1px solid rgba(255,255,255,0.12);
+        min-height: 210px;
+      }
+
+      .diff-number {
+        display: block;
+        margin-bottom: 20px;
+        font-size: 0.78rem;
+        letter-spacing: 0.2em;
+        text-transform: uppercase;
+        color: rgba(255,255,255,0.54);
+      }
+
+      .diff-item h3 {
+        margin: 0 0 8px;
+        font-size: 1.18rem;
+        letter-spacing: -0.04em;
+      }
+
+      .diff-item p {
+        margin: 0;
+        color: rgba(255,255,255,0.7);
+      }
+
+      .veterinary,
+      .petshop,
+      .location,
+      .about {
+        background: var(--white);
+      }
+
+      .split {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: clamp(28px, 5vw, 62px);
+        align-items: center;
+      }
+
+      .split-copy h2 {
+        margin: 18px 0 16px;
+        font-size: clamp(2.3rem, 3.8vw, 4rem);
+        letter-spacing: -0.07em;
+        line-height: 0.96;
+      }
+
+      .split-copy p {
+        margin: 0 0 28px;
+        color: rgba(17,17,17,0.72);
+        font-size: 1.05rem;
+      }
+
+      .highlight {
+        display: inline-block;
+        font-weight: 700;
+        color: var(--green-dark);
+      }
+
+      .split-visual {
+        position: relative;
+        min-height: 540px;
+      }
+
+      .veterinary-visual,
+      .grooming-visual,
+      .about-visual {
+        position: relative;
+        width: min(560px, 100%);
+        height: 540px;
+        margin-left: auto;
+        border-radius: 30px;
+        overflow: hidden;
+        background: linear-gradient(180deg, rgba(118,143,49,0.2), rgba(255,255,255,0.08));
+        box-shadow: var(--shadow-soft);
+      }
+
+      .grooming-visual .placeholder,
+      .about-visual .placeholder {
+        position: absolute;
+        inset: 16px;
+        border-radius: 24px;
+        border: 1px solid rgba(255,255,255,0.44);
+        background: linear-gradient(135deg, rgba(255,255,255,0.18), rgba(118,143,49,0.08));
+      }
+
+      .grooming-visual .placeholder::before,
+      .about-visual .placeholder::before {
+        content: "[IMAGEM REAL DO AMBIENTE]";
+        position: absolute;
+        inset: auto 18px 18px 18px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        min-height: 62px;
+        border-radius: 18px;
+        background: rgba(255,255,255,0.78);
+        color: rgba(17,17,17,0.6);
+        font-size: 0.76rem;
+        letter-spacing: 0.16em;
+        text-transform: uppercase;
+      }
+
+      .veterinary .split-visual {
+        min-height: 0;
+      }
+
+      .veterinary-visual {
+        height: auto;
+        aspect-ratio: 16 / 9;
+      }
+
+      .veterinary-image {
+        position: absolute;
+        inset: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: center;
+      }
+
+      .grooming {
+        background: linear-gradient(180deg, #f3efe5 0%, #ffffff 100%);
+      }
+
+      .grooming-image {
+        position: absolute;
+        inset: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: center 56%;
+      }
+
+      .grooming-visual {
+        margin-left: 0;
+        margin-right: auto;
+      }
+
+      .gallery-grid {
+        display: grid;
+        grid-template-columns: 1.1fr 0.9fr;
+        gap: 22px;
+        margin-top: 26px;
+      }
+
+      .gallery-tile {
+        min-height: 270px;
+        border-radius: 28px;
+        background: linear-gradient(135deg, rgba(118,143,49,0.16), rgba(255,255,255,0.12));
+        border: 1px solid rgba(17,17,17,0.05);
+        position: relative;
+        overflow: hidden;
+      }
+
+      .gallery-tile::before {
+        content: "[FOTO/AMBIENTE]";
+        position: absolute;
+        inset: auto 18px 18px 18px;
+        min-height: 52px;
+        display: grid;
+        place-items: center;
+        border-radius: 16px;
+        background: rgba(255,255,255,0.72);
+        color: rgba(17,17,17,0.64);
+        font-size: 0.7rem;
+        letter-spacing: 0.14em;
+        text-transform: uppercase;
+      }
+
+      .petshop-layout {
+        display: grid;
+        grid-template-columns: 0.88fr 1.12fr;
+        gap: 30px;
+        align-items: center;
+      }
+
+      .petshop-visual {
+        position: relative;
+        width: min(100%, 420px);
+        aspect-ratio: 9 / 16;
+        margin-inline: auto;
+      }
+
+      .petshop-panel {
+        position: absolute;
+        inset: 0;
+        border-radius: 30px;
+        background: linear-gradient(180deg, #f0efd9 0%, #d5dcc2 100%);
+        box-shadow: var(--shadow-soft);
+        overflow: hidden;
+      }
+
+      .petshop-image {
+        position: absolute;
+        inset: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+        object-position: center;
+      }
+
+      .categories {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 18px;
+      }
+
+      .category {
+        padding: 24px 18px;
+        background: #f9f7f2;
+        border-radius: 22px;
+        border: 1px solid rgba(17,17,17,0.06);
+      }
+
+      .category-label {
+        display: inline-flex;
+        padding: 8px 10px;
+        border-radius: 999px;
+        background: rgba(118,143,49,0.12);
+        color: var(--green-dark);
+        font-size: 0.72rem;
+        font-weight: 700;
+        letter-spacing: 0.12em;
+        text-transform: uppercase;
+        margin-bottom: 16px;
+      }
+
+      .category h3 {
+        margin: 0 0 8px;
+        font-size: 1.3rem;
+        letter-spacing: -0.04em;
+      }
+
+      .category p {
+        margin: 0;
+        color: rgba(17,17,17,0.7);
+      }
+
+      .about .split-copy {
+        max-width: 560px;
+      }
+
+      .about-visual {
+        margin-left: 0;
+        width: min(100%, 420px);
+        height: auto;
+        aspect-ratio: 9 / 16;
+      }
+
+      .about .split-visual {
+        min-height: 0;
+      }
+
+      .about-image {
+        position: absolute;
+        inset: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+        object-position: center;
+      }
+
+      .location-wrap {
+        display: grid;
+        grid-template-columns: 0.9fr 1.1fr;
+        gap: 30px;
+        align-items: stretch;
+      }
+
+      .location-card {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        padding: clamp(26px, 5vw, 38px);
+        background: linear-gradient(180deg, #ffffff 0%, #f5f2eb 100%);
+        border: 1px solid rgba(17,17,17,0.07);
+        border-radius: 28px;
+      }
+
+      .location-card h3 {
+        margin: 18px 0 14px;
+        font-size: clamp(2.1rem, 3.5vw, 3.4rem);
+        letter-spacing: -0.06em;
+      }
+
+      .address-list {
+        display: grid;
+        gap: 18px;
+        margin-top: 18px;
+      }
+
+      .address-item {
+        display: grid;
+        gap: 4px;
+      }
+
+      .address-item span {
+        color: rgba(17,17,17,0.6);
+        font-size: 0.78rem;
+        letter-spacing: 0.12em;
+        text-transform: uppercase;
+      }
+
+      .address-item strong {
+        font-size: 1.05rem;
+        line-height: 1.5;
+      }
+
+      .location-map {
+        min-height: 0;
+        aspect-ratio: 9 / 5;
+        align-self: center;
+        position: relative;
+        overflow: hidden;
+        border-radius: 28px;
+        border: 1px solid rgba(17,17,17,0.08);
+        background: #edf1e5;
+      }
+
+      .location-image {
+        position: absolute;
+        inset: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: center;
+      }
+
+      .cta-final {
+        background: linear-gradient(180deg, #768f31 0%, #657d28 100%);
+        color: var(--white);
+      }
+
+      .cta-panel {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: space-between;
+        gap: 20px;
+        padding: clamp(26px, 4vw, 42px);
+        border-radius: 30px;
+        background: rgba(255,255,255,0.06);
+        border: 1px solid rgba(255,255,255,0.14);
+      }
+
+      .cta-panel .brand-mark {
+        display: flex;
+        align-items: center;
+        gap: 18px;
+      }
+
+      .cta-panel .brand-mark img {
+        width: 90px;
+      }
+
+      .cta-panel .brand-mark span {
+        display: block;
+        font-size: 0.82rem;
+        letter-spacing: 0.18em;
+        text-transform: uppercase;
+        opacity: 0.8;
+      }
+
+      .cta-panel h2 {
+        margin: 8px 0 0;
+        font-size: clamp(2.2rem, 4vw, 4.2rem);
+        letter-spacing: -0.07em;
+        line-height: 0.96;
+      }
+
+      .cta-panel p {
+        margin: 10px 0 0;
+        max-width: 540px;
+        opacity: 0.9;
+      }
+
+      .cta-actions {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 12px;
+        align-items: center;
+        justify-content: flex-end;
+      }
+
+      .cta-actions .btn-secondary {
+        background: rgba(255,255,255,0.08);
+        color: var(--white);
+        border-color: rgba(255,255,255,0.24);
+      }
+
+      .site-footer {
+        padding: 26px 0 34px;
+        border-top: 1px solid rgba(17,17,17,0.08);
+        background: #f7f5f1;
+      }
+
+      .site-footer a {
+        transition: color 0.2s ease, opacity 0.2s ease;
+      }
+
+      .site-footer a:hover,
+      .site-footer a:focus-visible {
+        color: var(--green-dark);
+        text-decoration: underline;
+        text-underline-offset: 3px;
+      }
+
+      .site-footer a:active {
+        color: var(--green-dark);
+        opacity: 0.68;
+      }
+
+      .footer-wrap {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 18px;
+      }
+
+      .footer-brand {
+        display: inline-flex;
+        align-items: center;
+        gap: 16px;
+      }
+
+      .footer-brand img {
+        width: 110px;
+      }
+
+      .footer-links {
+        display: grid;
+        justify-items: start;
+        gap: 8px;
+        font-size: 0.92rem;
+        color: rgba(17,17,17,0.7);
+      }
+
+      .footer-links strong {
+        color: var(--black);
+        font-size: 0.92rem;
+      }
+
+      .footer-meta {
+        text-align: right;
+        color: rgba(17,17,17,0.6);
+        font-size: 0.86rem;
+      }
+
+      .footer-contact,
+      .footer-address,
+      .footer-hours,
+      .footer-legal {
+        display: grid;
+        gap: 6px;
+      }
+
+      .footer-contact {
+        margin-bottom: 12px;
+      }
+
+      .footer-contact strong,
+      .footer-address strong,
+      .footer-hours strong {
+        color: var(--black);
+        font-size: 0.92rem;
+      }
+
+      .footer-address {
+        margin-bottom: 12px;
+      }
+
+      .footer-hours {
+        margin-bottom: 12px;
+      }
+
+      .footer-legal {
+        margin-top: 8px;
+        padding-top: 10px;
+        border-top: 1px solid rgba(17,17,17,0.12);
+      }
+
+      .footer-legal span {
+        color: rgba(17,17,17,0.72);
+        font-weight: 600;
+      }
+
+      .footer-address address {
+        font-style: normal;
+      }
+
+      .cursor {
+        position: fixed;
+        left: 0;
+        top: 0;
+        width: 22px;
+        height: 22px;
+        border-radius: 50%;
+        background: rgba(118,143,49,0.18);
+        border: 1px solid rgba(118,143,49,0.5);
+        pointer-events: none;
+        transform: translate(-50%, -50%);
+        z-index: 100;
+        transition: width 0.2s ease, height 0.2s ease, border-color 0.2s ease, background 0.2s ease;
+      }
+
+      .cursor.active {
+        width: 42px;
+        height: 42px;
+        background: rgba(118,143,49,0.12);
+      }
+
+      .reveal {
+        opacity: 0;
+        transform: translateY(28px);
+        transition: opacity 0.72s ease, transform 0.72s ease;
+      }
+
+      .reveal.visible {
+        opacity: 1;
+        transform: translateY(0);
+      }
+
+      @media (max-width: 980px) {
+        .nav-wrap {
+          position: relative;
+          min-height: 56px;
+          gap: 10px;
+          padding-top: 0;
+          padding-bottom: 0;
+        }
+
+        .brand img {
+          width: 120px;
+        }
+
+        .header-actions {
+          display: flex;
+          align-items: center;
+          justify-content: flex-end;
+          gap: 8px;
+          margin-left: auto;
+        }
+
+        .hero-wrap,
+        .manifesto-grid,
+        .split,
+        .location-wrap,
+        .petshop-layout {
+          grid-template-columns: 1fr;
+        }
+
+        .diff-grid {
+          grid-template-columns: repeat(2, minmax(0, 1fr));
+        }
+
+        .nav {
+          display: none;
+        }
+
+        .nav-panel {
+          display: none;
+          position: absolute;
+          top: calc(100% + 8px);
+          right: 0;
+          left: auto;
+          width: min(240px, calc(100vw - 32px));
+          background: rgba(255,255,255,0.96);
+          border: 1px solid rgba(17,17,17,0.06);
+          border-radius: 20px;
+          padding: 18px 20px;
+          box-shadow: var(--shadow-soft);
+          opacity: 0;
+          pointer-events: none;
+          transform: translateY(-12px);
+          transition: opacity 0.25s ease, transform 0.25s ease;
+          z-index: 4;
+        }
+
+        .nav-panel.open {
+          display: block;
+          opacity: 1;
+          pointer-events: auto;
+          transform: translateY(0);
+        }
+
+        .nav-panel a {
+          display: block;
+          padding: 12px 0;
+          border-bottom: 1px solid rgba(17,17,17,0.06);
+        }
+
+        .nav-panel a:last-child {
+          border-bottom: none;
+        }
+
+        .mobile-toggle {
+          display: inline-flex;
+          align-items: center;
+          justify-content: center;
+          width: 46px;
+          height: 46px;
+          border-radius: 50%;
+          border: 1px solid rgba(17,17,17,0.08);
+          background: rgba(255,255,255,0.22);
+          cursor: pointer;
+          margin-left: 0;
+        }
+
+        .mobile-toggle span,
+        .mobile-toggle span::before,
+        .mobile-toggle span::after {
+          display: block;
+          position: relative;
+          width: 18px;
+          height: 2px;
+          background: var(--black);
+          border-radius: 2px;
+        }
+
+        .mobile-toggle span::before,
+        .mobile-toggle span::after {
+          content: "";
+          position: absolute;
+          left: 0;
+        }
+
+        .mobile-toggle span::before { top: -6px; }
+        .mobile-toggle span::after { top: 6px; }
+
+        .split-visual {
+          min-height: 420px;
+        }
+
+        .location-map {
+          min-height: 0;
+          aspect-ratio: 2 / 1;
+          align-self: stretch;
+        }
+      }
+
+      @media (max-width: 620px) {
+        .specialty-grid {
+          grid-template-columns: 1fr;
+        }
+
+        .site-header.scrolled {
+          background: rgba(245, 242, 235, 0.9);
+        }
+
+        .nav-wrap {
+          min-height: 52px;
+          padding-top: 0;
+          padding-bottom: 0;
+        }
+
+        .brand img {
+          width: 108px;
+        }
+
+        .nav-panel {
+          top: calc(100% + 4px);
+        }
+
+        .mobile-toggle {
+          width: 42px;
+          height: 42px;
+        }
+
+        .hero {
+          padding-top: 24px;
+        }
+
+        .hero-title {
+          letter-spacing: -0.06em;
+        }
+
+        .hero-actions,
+        .cta-actions {
+          flex-direction: column;
+          align-items: stretch;
+        }
+
+        .hero-actions .btn,
+        .hero-actions .btn-secondary,
+        .cta-actions .btn,
+        .cta-actions .btn-secondary {
+          width: 100%;
+        }
+
+        .diff-grid,
+        .categories {
+          grid-template-columns: 1fr;
+        }
+
+        .footer-wrap {
+          flex-direction: column;
+          align-items: flex-start;
+        }
+
+        .footer-meta {
+          text-align: left;
+        }
+
+        .cursor {
+          display: none;
+        }
+
+      }
+
+      @media (prefers-reduced-motion: reduce) {
+        * {
+          animation: none !important;
+          transition: none !important;
+          scroll-behavior: auto !important;
+        }
+
+        .reveal {
+          opacity: 1;
+          transform: none;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="cursor" aria-hidden="true"></div>
+
+    <header class="site-header" id="top">
+      <div class="container nav-wrap">
+        <a href="#top" class="brand" aria-label="The Dog Spa - Início">
+          <img src="logo/logothedogspa.png" alt="The Dog Spa logo" />
+        </a>
+
+        <nav class="nav" aria-label="Menu principal">
+          <a href="#top">Início</a>
+          <a href="#especialidades">Especialidades</a>
+          <a href="#experiencia">Experiência</a>
+          <a href="#localizacao">Localização</a>
+        </nav>
+
+        <div class="nav-panel" id="navPanel" aria-label="Menu mobile"></div>
+
+        <div class="header-actions">
+          <button class="mobile-toggle" type="button" aria-label="Abrir menu" aria-expanded="false">
+            <span></span>
+          </button>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <section class="hero">
+        <div class="container hero-wrap">
+          <div class="hero-copy reveal">
+            <div class="eyebrow">Cerqueira César · São Paulo</div>
+            <h1 class="hero-title">
+              Seu pet merece<br />
+              <span class="serif">O Melhor</span>
+            </h1>
+            <p class="hero-sub">
+              Atendimento veterinário, banho e tosa e uma experiência pensada para o bem-estar do seu melhor amigo.
+            </p>
+            <div class="hero-actions">
+              <a class="btn" href="https://wa.me/5511957169534?text=Ol%C3%A1!%20Conheci%20o%20The%20Dog%20Spa%20pelo%20site%20e%20gostaria%20de%20saber%20mais%20sobre%20os%20atendimentos." target="_blank" rel="noopener noreferrer">
+                <svg class="whatsapp-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false">
+                  <path d="M20.2 11.7a8.2 8.2 0 0 1-12.1 7.2L4 20l1.2-4a8.2 8.2 0 1 1 15-4.3Z" />
+                  <path d="M8.1 8.1c.3-.6.5-.6.8-.6h.4c.2 0 .4.1.5.4l.7 1.7c.1.2.1.4-.1.6l-.6.7c-.2.2-.2.4-.1.6.4.8 1.1 1.5 1.8 1.8.2.1.4.1.6-.1l.7-.7c.2-.2.4-.2.6-.1l1.7.8c.3.1.4.3.4.5 0 .3-.1 1.1-.7 1.5-.5.4-1 .5-1.7.3-.7-.2-1.5-.5-2.6-1.4-.9-.8-1.6-1.7-1.9-2.4-.3-.7-.1-1.3.2-1.7Z" />
+                </svg>
+                Agendar atendimento
+              </a>
+              <a class="btn" href="https://maps.app.goo.gl/e4fSSH7oq8fRnRDy5" target="_blank" rel="noopener noreferrer">
+                <svg class="hero-location-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false">
+                  <path d="M20 10c0 5-8 12-8 12S4 15 4 10a8 8 0 1 1 16 0Z" />
+                  <circle cx="12" cy="10" r="2.5" />
+                </svg>
+                Conhecer o The Dog Spa
+              </a>
+            </div>
+            <div class="hero-meta" aria-label="Informações do atendimento">
+              <span>Rua Oscar Freire</span>
+              <span>Seg. a Sáb. · 09h às 18h</span>
+            </div>
+          </div>
+
+          <div class="hero-visual reveal" aria-label="Visualização da experiência premium">
+            <div class="visual-card">
+              <img class="hero-image" src="assets/fachada.jpg.jpeg" alt="Fachada do The Dog Spa e entrada da loja" />
+            </div>
+            <div class="hero-ornament" aria-hidden="true"></div>
+          </div>
+        </div>
+      </section>
+
+      <section class="manifesto section" id="experiencia">
+        <div class="container manifesto-grid">
+          <div class="manifesto-copy reveal">
+            <div class="eyebrow">Experiência</div>
+            <h2 class="manifesto-quote">Porque cuidar também é uma forma de amar.</h2>
+            <p class="manifesto-text">
+              O The Dog Spa nasceu para tornar o cuidado com os pets uma experiência mais tranquila, atenciosa e especial — para eles e para quem confia seus companheiros à nossa equipe.
+            </p>
+          </div>
+
+          <div class="manifesto-visual reveal" aria-label="Ambiente premium">
+            <div class="manifesto-panel">
+              <img class="manifesto-image" src="assets/espa%C3%A7o3.jpeg" alt="Profissional da equipe ao lado de um cão sobre a mesa de atendimento do The Dog Spa" />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="specialties section" id="especialidades">
+        <div class="container">
+          <div class="section-head reveal">
+            <div class="eyebrow">Serviços</div>
+            <h2 class="section-title">Especialidades</h2>
+          </div>
+
+          <div class="specialty-grid">
+            <article class="specialty-card reveal">
+              <div class="specialty-thumb"><img src="assets/cuidadosdogs/cirurgiadog.jpg" alt="Imagem ilustrativa: cirurgia geral e ortopédica veterinária" /></div>
+              <h3>Cirurgia geral e ortopédica</h3>
+            </article>
+
+            <article class="specialty-card reveal">
+              <div class="specialty-thumb"><img src="assets/cuidadosdogs/cardiologiadog.jpg" alt="Imagem ilustrativa: cardiologia veterinária" /></div>
+              <h3>Cardiologia</h3>
+            </article>
+
+            <article class="specialty-card reveal">
+              <div class="specialty-thumb"><img src="assets/cuidadosdogs/ortopediadog.jpg" alt="Imagem ilustrativa: ortopedia veterinária" /></div>
+              <h3>Ortopedia</h3>
+            </article>
+
+            <article class="specialty-card reveal">
+              <div class="specialty-thumb"><img src="assets/cuidadosdogs/nutrologiadog.jpg" alt="Imagem ilustrativa: nutrologia veterinária" /></div>
+              <h3>Nutrologia</h3>
+            </article>
+
+            <article class="specialty-card reveal">
+              <div class="specialty-thumb"><img src="assets/cuidadosdogs/anesteologiadog.jpg" alt="Imagem ilustrativa: anestesiologia veterinária" /></div>
+              <h3>Anestesiologia</h3>
+            </article>
+
+            <article class="specialty-card reveal">
+              <div class="specialty-thumb"><img src="assets/cuidadosdogs/olftamologiadog.jpg" alt="Imagem ilustrativa: oftalmologia veterinária" /></div>
+              <h3>Oftalmologia</h3>
+            </article>
+
+            <article class="specialty-card reveal">
+              <div class="specialty-thumb"><img src="assets/cuidadosdogs/dermatologiadog.jpg" alt="Imagem ilustrativa: dermatologia veterinária" /></div>
+              <h3>Dermatologia</h3>
+            </article>
+
+            <article class="specialty-card reveal">
+              <div class="specialty-thumb"><img src="assets/cuidadosdogs/odontologiadog.jpg" alt="Imagem ilustrativa: odontologia veterinária" /></div>
+              <h3>Odontologia</h3>
+            </article>
+
+            <article class="specialty-card reveal">
+              <div class="specialty-thumb"><img src="assets/cuidadosdogs/exameslaboratoriaisdog.jpg" alt="Imagem ilustrativa: exames laboratoriais e de imagem veterinária" /></div>
+              <h3>Exames laboratoriais de imagem</h3>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="differentials section" id="diferenca">
+        <div class="container">
+          <div class="section-head reveal">
+            <div class="eyebrow">Diferença</div>
+            <h2 class="section-title">Mais do que um atendimento.</h2>
+          </div>
+
+          <div class="diff-grid">
+            <article class="diff-item reveal">
+              <span class="diff-number">01</span>
+              <h3>Atenção aos detalhes</h3>
+              <p>O cuidado é percebido em cada etapa, do acolhimento até a retirada do pet.</p>
+            </article>
+            <article class="diff-item reveal">
+              <span class="diff-number">02</span>
+              <h3>Cuidado individual</h3>
+              <p>Atendimento pensado para as necessidades e rotina de cada animal.</p>
+            </article>
+            <article class="diff-item reveal">
+              <span class="diff-number">03</span>
+              <h3>Equipe especializada</h3>
+              <p>Profissionais atentos, seguros e comprometidos com o bem-estar do pet.</p>
+            </article>
+            <article class="diff-item reveal">
+              <span class="diff-number">04</span>
+              <h3>Experiência acolhedora</h3>
+              <p>Uma rotina mais tranquila para quem confia o cuidado do companheiro com carinho.</p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="veterinary section" id="veterinario">
+        <div class="container split">
+          <div class="split-copy reveal">
+            <div class="eyebrow">Veterinário</div>
+            <h2>Quando a saúde importa, confiança também.</h2>
+            <p>
+              Conte com atendimento veterinário realizado com atenção, cuidado e respeito às necessidades de cada pet.
+            </p>
+            <p>
+              Acompanhamento com foco em bem-estar, conforto e cuidado individualizado para cada animal.
+            </p>
+            <a class="btn" href="https://wa.me/5511957169534?text=Ol%C3%A1!%20Gostaria%20de%20informa%C3%A7%C3%B5es%20sobre%20atendimento%20veterin%C3%A1rio%20no%20The%20Dog%20Spa." target="_blank" rel="noopener noreferrer">
+              <svg class="whatsapp-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false">
+                <path d="M20.2 11.7a8.2 8.2 0 0 1-12.1 7.2L4 20l1.2-4a8.2 8.2 0 1 1 15-4.3Z" />
+                <path d="M8.1 8.1c.3-.6.5-.6.8-.6h.4c.2 0 .4.1.5.4l.7 1.7c.1.2.1.4-.1.6l-.6.7c-.2.2-.2.4-.1.6.4.8 1.1 1.5 1.8 1.8.2.1.4.1.6-.1l.7-.7c.2-.2.4-.2.6-.1l1.7.8c.3.1.4.3.4.5 0 .3-.1 1.1-.7 1.5-.5.4-1 .5-1.7.3-.7-.2-1.5-.5-2.6-1.4-.9-.8-1.6-1.7-1.9-2.4-.3-.7-.1-1.3.2-1.7Z" />
+              </svg>
+              Agendar atendimento
+            </a>
+          </div>
+
+          <div class="split-visual reveal">
+            <div class="veterinary-visual">
+              <img class="veterinary-image" src="assets/espa%C3%A7o4.jpeg" alt="Atendimento veterinário no The Dog Spa, com um cão sobre a mesa e profissionais da equipe" />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="grooming section" id="banho-tosa">
+        <div class="container split">
+          <div class="split-visual reveal">
+            <div class="grooming-visual">
+              <img class="grooming-image" src="assets/espa%C3%A7o5.jpeg" alt="Área de banho e tosa do The Dog Spa, com banheiras e um profissional da equipe" />
+            </div>
+          </div>
+
+          <div class="split-copy reveal">
+            <div class="eyebrow">Banho &amp; tosa</div>
+            <h2>Um banho pode ser muito mais do que um banho.</h2>
+            <p>
+              No The Dog Spa, o cuidado está nos detalhes — da atenção durante o atendimento à experiência que seu pet leva para casa.
+            </p>
+            <p>
+              Tudo pensado para que a rotina seja mais agradável, segura e confortável para quem ama o companheiro.
+            </p>
+            <a class="btn" href="https://wa.me/5511957169534?text=Ol%C3%A1!%20Gostaria%20de%20agendar%20banho%20e%20tosa%20para%20o%20meu%20pet." target="_blank" rel="noopener noreferrer">
+              <svg class="whatsapp-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false">
+                <path d="M20.2 11.7a8.2 8.2 0 0 1-12.1 7.2L4 20l1.2-4a8.2 8.2 0 1 1 15-4.3Z" />
+                <path d="M8.1 8.1c.3-.6.5-.6.8-.6h.4c.2 0 .4.1.5.4l.7 1.7c.1.2.1.4-.1.6l-.6.7c-.2.2-.2.4-.1.6.4.8 1.1 1.5 1.8 1.8.2.1.4.1.6-.1l.7-.7c.2-.2.4-.2.6-.1l1.7.8c.3.1.4.3.4.5 0 .3-.1 1.1-.7 1.5-.5.4-1 .5-1.7.3-.7-.2-1.5-.5-2.6-1.4-.9-.8-1.6-1.7-1.9-2.4-.3-.7-.1-1.3.2-1.7Z" />
+              </svg>
+              Agendar banho e tosa
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <section class="petshop section" id="pet-shop">
+        <div class="container petshop-layout">
+          <div class="petshop-visual reveal">
+            <div class="petshop-panel">
+              <img class="petshop-image" src="assets/espa%C3%A7o2.jpg" alt="Interior do The Dog Spa com produtos para pets e área de atendimento" />
+            </div>
+          </div>
+
+          <div class="split-copy reveal">
+            <div class="eyebrow">Pet shop</div>
+            <h2>Escolhas que fazem parte da rotina.</h2>
+            <p>
+              Produtos para cuidar do conforto, da higiene e do bem-estar de cada dia. Uma seleção pensada para quem quer manter a rotina do pet mais prática e agradável.
+            </p>
+
+            <div class="categories">
+              <div class="category">
+                <div class="category-label">Rações</div>
+                <h3>Essenciais do dia a dia</h3>
+                <p>Opções para manter a rotina do pet mais saudável e equilibrada.</p>
+              </div>
+              <div class="category">
+                <div class="category-label">Acessórios</div>
+                <h3>Detalhes que fazem diferença</h3>
+                <p>Produtos para conforto, uso prático e maior qualidade no cotidiano.</p>
+              </div>
+              <div class="category">
+                <div class="category-label">Cuidados</div>
+                <h3>Higiene e bem-estar</h3>
+                <p>Itens que acompanham as necessidades de cada pet com atenção.</p>
+              </div>
+              <div class="category">
+                <div class="category-label">Identificação</div>
+                <h3>Segurança e praticidade</h3>
+                <p>Pequenos itens que agregam conforto e confiança na rotina.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="about section" id="sobre">
+        <div class="container split">
+          <div class="split-copy reveal">
+            <div class="eyebrow">Sobre</div>
+            <h2>Por trás de cada atendimento, existe cuidado.</h2>
+            <p>
+              O The Dog Spa combina cuidado veterinário, estética e higiene, produtos e atendimento próximo para criar uma experiência mais completa para pets e tutores.
+            </p>
+            <p>
+              Mais do que um ponto de serviço, é uma rotina pensada com atenção, segurança e acolhimento.
+            </p>
+          </div>
+
+          <div class="split-visual reveal">
+            <div class="about-visual">
+              <img class="about-image" src="assets/espa%C3%A7o6.jpeg" alt="Interior do The Dog Spa com prateleiras de produtos para pets e uma caminha" />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="location section" id="localizacao">
+        <div class="container location-wrap">
+          <div class="location-card reveal">
+            <div class="eyebrow">Localização</div>
+            <h3>Estamos em Cerqueira César.</h3>
+            <div class="address-list">
+              <div class="address-item">
+                <span>Endereço</span>
+                <strong>Rua Oscar Freire, 125<br />Cerqueira César<br />São Paulo — SP<br />01426-001</strong>
+              </div>
+              <div class="address-item">
+                <span>Telefone</span>
+                <strong>(11) 95716-9534</strong>
+              </div>
+              <div class="address-item">
+                <span>Horários</span>
+                <strong>Segunda a sábado<br />09h às 18h<br />Domingo · Fechado</strong>
+              </div>
+            </div>
+            <div class="hero-actions" style="margin-top: 28px; margin-bottom: 0;">
+              <a class="btn" href="https://maps.google.com/?q=Rua+Oscar+Freire,+125,+Cerqueira+C%C3%A9sar,+S%C3%A3o+Paulo,+SP" target="_blank" rel="noreferrer">Como chegar</a>
+            </div>
+          </div>
+
+          <div class="location-map reveal">
+            <img class="location-image" src="assets/loc.jpeg" alt="Fachada do The Dog Spa com a identificação dos serviços veterinários, banho e tosa" />
+          </div>
+        </div>
+      </section>
+
+      <section class="cta-final section">
+        <div class="container">
+          <div class="cta-panel reveal">
+            <div class="brand-mark">
+              <img src="logo/logothedogspa.png" alt="The Dog Spa logo" />
+              <div>
+                <span>The Dog Spa</span>
+                <h2>Seu pet merece ser cuidado com atenção.</h2>
+              </div>
+            </div>
+
+            <div class="cta-actions">
+              <a class="btn" href="https://wa.me/5511957169534?text=Ol%C3%A1!%20Conheci%20o%20The%20Dog%20Spa%20pelo%20site%20e%20gostaria%20de%20agendar%20um%20atendimento." target="_blank" rel="noopener noreferrer">
+                <svg class="whatsapp-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false">
+                  <path d="M20.2 11.7a8.2 8.2 0 0 1-12.1 7.2L4 20l1.2-4a8.2 8.2 0 1 1 15-4.3Z" />
+                  <path d="M8.1 8.1c.3-.6.5-.6.8-.6h.4c.2 0 .4.1.5.4l.7 1.7c.1.2.1.4-.1.6l-.6.7c-.2.2-.2.4-.1.6.4.8 1.1 1.5 1.8 1.8.2.1.4.1.6-.1l.7-.7c.2-.2.4-.2.6-.1l1.7.8c.3.1.4.3.4.5 0 .3-.1 1.1-.7 1.5-.5.4-1 .5-1.7.3-.7-.2-1.5-.5-2.6-1.4-.9-.8-1.6-1.7-1.9-2.4-.3-.7-.1-1.3.2-1.7Z" />
+                </svg>
+                Agendar atendimento
+              </a>
+              <a class="btn-secondary" href="https://maps.google.com/?q=Rua+Oscar+Freire,+125,+Cerqueira+C%C3%A9sar,+S%C3%A3o+Paulo,+SP" target="_blank" rel="noreferrer">Rua Oscar Freire, 125 · Cerqueira César · São Paulo</a>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container footer-wrap">
+        <div class="footer-brand">
+          <img src="logo/logothedogspa.png" alt="The Dog Spa logo" />
+        </div>
+
+        <nav class="footer-links" aria-label="Conecte">
+          <strong>Conecte</strong>
+          <a href="#top">Início</a>
+          <a href="#experiencia">Experiência</a>
+          <a href="#especialidades">Serviços</a>
+          <a href="#diferenca">Diferença</a>
+          <a href="#veterinario">Veterinário</a>
+          <a href="#banho-tosa">Banho &amp; tosa</a>
+          <a href="#pet-shop">Pet shop</a>
+          <a href="#sobre">Sobre</a>
+          <a href="#localizacao">Localização</a>
+        </nav>
+
+        <div class="footer-meta">
+          <div class="footer-contact">
+            <strong>Contato</strong>
+            <a href="https://www.instagram.com/thedogspaoficial/" target="_blank" rel="noopener noreferrer">@thedogspaoficial</a>
+            <a href="https://wa.me/5511957169534" target="_blank" rel="noopener noreferrer">+55 11 95716-9534</a>
+          </div>
+          <div class="footer-address">
+            <strong>Endereço</strong>
+            <address>R. Oscar Freire, 125 - Cerqueira César, São Paulo - SP, 01426-001</address>
+          </div>
+          <div class="footer-hours">
+            <strong>Horário</strong>
+            <span>Segunda a sábado · 09h às 18h</span>
+            <span>Domingo · Fechado</span>
+          </div>
+          <div class="footer-legal">
+            <span>© <span id="year">2026</span> The Dog Spa</span>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <script>
+      const mobileToggle = document.querySelector('.mobile-toggle');
+      const navPanel = document.getElementById('navPanel');
+      const navLinks = Array.from(document.querySelectorAll('.nav a'));
+      const year = document.getElementById('year');
+      const cursor = document.querySelector('.cursor');
+
+      navLinks.forEach((link) => {
+        const clone = document.createElement('a');
+        clone.href = link.getAttribute('href');
+        clone.textContent = link.textContent;
+        navPanel.appendChild(clone);
+      });
+
+      year.textContent = new Date().getFullYear();
+
+      if (mobileToggle) {
+        mobileToggle.addEventListener('click', () => {
+          const isOpen = navPanel.classList.toggle('open');
+          mobileToggle.setAttribute('aria-expanded', String(isOpen));
+          document.body.classList.toggle('no-scroll', isOpen);
+        });
+
+        navPanel.querySelectorAll('a').forEach((link) => {
+          link.addEventListener('click', () => {
+            navPanel.classList.remove('open');
+            mobileToggle.setAttribute('aria-expanded', 'false');
+            document.body.classList.remove('no-scroll');
+          });
+        });
+      }
+
+      const revealItems = document.querySelectorAll('.reveal');
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('visible');
+            observer.unobserve(entry.target);
+          }
+        });
+      }, { threshold: 0.12 });
+
+      revealItems.forEach((item) => observer.observe(item));
+
+      if (window.matchMedia('(pointer: fine)').matches) {
+        document.addEventListener('mousemove', (event) => {
+          cursor.style.left = `${event.clientX}px`;
+          cursor.style.top = `${event.clientY}px`;
+        });
+
+        document.querySelectorAll('a, button, .category, .diff-item').forEach((element) => {
+          element.addEventListener('mouseenter', () => cursor.classList.add('active'));
+          element.addEventListener('mouseleave', () => cursor.classList.remove('active'));
+        });
+      } else {
+        cursor.style.display = 'none';
+      }
+
+      const mediaQuery = window.matchMedia('(max-width: 1000px)');
+      const setMobileToggle = () => {
+        if (mobileToggle) {
+          mobileToggle.style.display = mediaQuery.matches ? 'inline-flex' : 'none';
+          if (!mediaQuery.matches) {
+            navPanel.classList.remove('open');
+            document.body.classList.remove('no-scroll');
+            mobileToggle.setAttribute('aria-expanded', 'false');
+          }
+        }
+      };
+
+      setMobileToggle();
+      mediaQuery.addEventListener('change', setMobileToggle);
+    </script>
+  </body>
+</html>
